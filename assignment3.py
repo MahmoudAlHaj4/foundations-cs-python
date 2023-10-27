@@ -19,7 +19,7 @@ def addMatrices():
    for row in range(num_row): # creating a loop to add rows and cols for matrix 1 
        matrix1_row = [] # creating an empty [] to store row values in matrix 1
        for col in range(num_col):
-           value = input("Enter row values of the first matrix: ") # add values to matrix 1
+           value = int(input("Enter row values of the first matrix: ")) # add values to matrix 1
            matrix1_row.append(value)
        matrix1.append(matrix1_row)
 
@@ -27,7 +27,7 @@ def addMatrices():
    for row in range(num_row): # creating a loop to add rows and cols for matrix 2 
        matrix2_row =[] # creating an empty [] to store row values in matrix 2
        for col in range(num_col):
-           value = input("Enter row values of the second matrix: ") # add values to matrix 2
+           value = int(input("Enter row values of the second matrix: ")) # add values to matrix 2
            matrix2_row.append(value)
        matrix2.append(matrix2_row)
     
