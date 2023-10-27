@@ -46,6 +46,10 @@ def addMatrices(m1,m2):
 matrix1 = []
 matrix2 = []
 
+def checkRotation(matrix1,matrix2):
+    if len(matrix1) == len(matrix2[0] and len(matrix2) == len(matrix1[0])):
+        return True
+    return False
 
 
 def main():
@@ -54,6 +58,10 @@ def main():
     choice = int(input("enter your choice: "))
     if choice == 1:
         addMatrices(matrix1,matrix2)
+    elif choice == 2:
+        checkRotation(matrix1,matrix2)
 
 main()
+
+
 
