@@ -17,22 +17,30 @@ def addMatrices():
 
    
    for row in range(num_row): # creating a loop to add rows and cols for matrix 1 
-       matrix1.append([])
+       matrix1_row = [] # creating an empty [] to store row values in matrix 1
        for col in range(num_col):
            value = input("Enter row values of the first matrix: ") # add values to matrix 1
-           matrix1[row].append(value)
+           matrix1_row.append(value)
+       matrix1.append(matrix1_row)
 
 
    for row in range(num_row): # creating a loop to add rows and cols for matrix 2 
-       matrix2.append([])
+       matrix2_row =[] # creating an empty [] to store row values in matrix 2
        for col in range(num_col):
            value = input("Enter row values of the second matrix: ") # add values to matrix 2
-           matrix2[row].append(value)
+           matrix2_row.append(value)
+       matrix2.append(matrix2_row)
     
    result = []
 
    for row in range(num_row):
        sum_of_row = [] # creating a new list to save the sum value in it
-       for cols in range(num_col):
+       for col in range(num_col):
            sum_of_row.append(matrix1[row][col]+ matrix2[row][col])
+       result.append(sum_of_row)
+
+   for row in result:
+       print(row)
+
+addMatrices()
 
