@@ -45,11 +45,15 @@ def addMatrices(m1,m2):
 
 matrix1 = []
 matrix2 = []
-addMatrices(matrix1,matrix2)
+
 
 
 def main():
-    pass
+    displayMenu()
+
+    choice = int(input("enter your choice: "))
+    if choice == 1:
+        addMatrices(matrix1,matrix2)
 
 main()
 
