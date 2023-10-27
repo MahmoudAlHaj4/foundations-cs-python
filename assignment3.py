@@ -10,3 +10,14 @@ def addMatrices():
    num_row = int(input("Enter the number of row: ")) 
    num_col = int(input("Enter the number of col: "))
    # inputs to get the number of rows and cols for the Matrix
+
+   
+   matrix1 = []
+   matrix2 = []
+
+   
+   for row in range(num_row): # creating a loop to add rows and cols for matrix 1 
+       matrix1.append([])
+       for col in range(num_col):
+           value = input("Enter row values of the first matrix: ")
+           matrix1[row].append(value)
