@@ -19,5 +19,13 @@ def addMatrices():
    for row in range(num_row): # creating a loop to add rows and cols for matrix 1 
        matrix1.append([])
        for col in range(num_col):
-           value = input("Enter row values of the first matrix: ")
+           value = input("Enter row values of the first matrix: ") # add values to matrix 1
            matrix1[row].append(value)
+
+
+   for row in range(num_row): # creating a loop to add rows and cols for matrix 2 
+       matrix2.append([])
+       for col in range(num_col):
+           value = input("Enter row values of the second matrix: ") # add values to matrix 2
+           matrix2[row].append(value)
+    
