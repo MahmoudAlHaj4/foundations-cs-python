@@ -29,3 +29,10 @@ def addMatrices():
            value = input("Enter row values of the second matrix: ") # add values to matrix 2
            matrix2[row].append(value)
     
+   result = []
+
+   for row in range(num_row):
+       sum_of_row = [] # creating a new list to save the sum value in it
+       for cols in range(num_col):
+           sum_of_row.append(matrix1[row][col]+ matrix2[row][col])
+
