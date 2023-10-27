@@ -101,4 +101,5 @@ string = "hellloooo wwwworrrrld"
 print(fixString(string))#O(N)
 
 # # Question 7
+name = ""
 
