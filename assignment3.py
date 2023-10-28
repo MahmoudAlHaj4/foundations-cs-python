@@ -70,11 +70,13 @@ def invertDictionary():
 
 
 def convertMatrixToDictionary():
-  final_dict = {}
+  final_dict = {} 
   num_emp = int(input("Enter the number of employees: "))
+  # creating a dit to store the the final result 
 
-  for row in range(1,num_emp+1):
-      result =[]
+  for row in range(1,num_emp+1): 
+      result =[] 
+      # creating a  nested loops to store the values to a matrix 
       for col in range(1):
 
           first_name = input("Enter your first name: ")
@@ -85,8 +87,9 @@ def convertMatrixToDictionary():
           result.append(last_name)
           result.append(job_title)
           result.append(company)
-      id = "ID" + str(row)
-      final_dict[id] = result
+      id = "ID" + str(row) 
+      # for creating a unique key I use str called ID and add to row by converting it to string
+      final_dict[id] = result # the final dict will hold the unique keys
 
   print("your classroom is:",final_dict )
 
@@ -103,6 +106,8 @@ def main():
         checkRotation(matrix1,matrix2)
     elif choice == 3:
         invertDictionary()
+    elif choice == 4:
+        convertMatrixToDictionary()
 
 main()
 
