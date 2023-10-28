@@ -55,7 +55,7 @@ def invertDictionary():
     num_values = int(input("Enter the number of values: ")) 
     # creating an input to get the number of values in dict
 
-    for x in range(num_values):
+    for x in range(num_values): # creating a loop to get from the user the key and the value 
         key = input("Enter your key: ")
         value = input("Enter a value: ")
         if value not in my_dict:
@@ -82,6 +82,8 @@ def main():
         addMatrices(matrix1,matrix2)
     elif choice == 2:
         checkRotation(matrix1,matrix2)
+    elif choice == 3:
+        invertDictionary()
 
 main()
 
