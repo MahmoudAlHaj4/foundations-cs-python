@@ -69,7 +69,11 @@ def invertDictionary():
     print(my_dict)
 
 
-def convertMatrixToDictionary():
+def convertMatrixToDictionary(m):
+    num_emp = int(input("enter the number of emp: "))
+    for row in range(1,num_empt+1):
+        result =[]
+    
         
 
 
