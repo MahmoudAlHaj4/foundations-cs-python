@@ -47,9 +47,31 @@ matrix1 = []
 matrix2 = []
 
 def checkRotation(matrix1,matrix2):
-    if len(matrix1) == len(matrix2[0] and len(matrix2) == len(matrix1[0])):
-        return True
-    return False
+  pass   
+
+
+def invertDictionary():
+    my_dict = {} 
+    num_values = int(input("Enter the number of values: ")) 
+    # creating an input to get the number of values in dict
+
+    for x in range(num_values):
+        key = input("Enter your key: ")
+        value = input("Enter a value: ")
+        if value not in my_dict:
+            my_dict[value] = [key]
+        else:
+            my_dict[value].append(key)
+
+    print("Your dictionary is:")
+    print(my_dict)
+
+    inverted_dict = {}
+    for keys, values in my_dict.items():
+        for value in values:
+            inverted_dict[value] = keys
+        
+
 
 
 def main():
