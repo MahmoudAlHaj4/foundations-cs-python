@@ -59,17 +59,14 @@ def invertDictionary():
         key = input("Enter your key: ")
         value = input("Enter a value: ")
         if value not in my_dict:
-            my_dict[value] = [key]
+            my_dict[value] = key
+            # if the value is not in dict the value,the value become the key and the key become the value
         else:
             my_dict[value].append(key)
+            # the dict[value] will add the key
 
     print("Your dictionary is:")
     print(my_dict)
-
-    inverted_dict = {}
-    for keys, values in my_dict.items():
-        for value in values:
-            inverted_dict[value] = keys
         
 
 
