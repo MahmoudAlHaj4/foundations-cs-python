@@ -69,12 +69,28 @@ def invertDictionary():
     print(my_dict)
 
 
-def convertMatrixToDictionary(m):
-    num_emp = int(input("enter the number of emp: "))
-    for row in range(1,num_empt+1):
-        result =[]
-    
-        
+def convertMatrixToDictionary():
+  final_dict = {}
+  num_emp = int(input("Enter the number of employees: "))
+
+  for row in range(1,num_emp+1):
+      result =[]
+      for col in range(1):
+
+          first_name = input("Enter your first name: ")
+          last_name = input("Enter your last name: ")
+          job_title = input("Enter your job title: ")
+          company= input("Enter your company: ")
+          result.append(first_name)
+          result.append(last_name)
+          result.append(job_title)
+          result.append(company)
+      id = "ID" + str(row)
+      final_dict[id] = result
+
+  print("your classroom is:",final_dict )
+
+convertMatrixToDictionary()
 
 
 def main():
