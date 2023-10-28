@@ -21,18 +21,18 @@ def addMatrices(m1,m2):
        matrix1_row = [] # creating an empty [] to store row values in matrix 1
        for col in range(num_col):
            value = int(input("Enter row values of the first matrix: ")) # add values to matrix 1
-           matrix1_row.append(value)
-       m1.append(matrix1_row)
+           matrix1_row.append(value) # The value will be saved in marix1_row
+       m1.append(matrix1_row) 
 
 
    for row in range(num_row): # creating a loop to add rows and cols for matrix 2 
        matrix2_row =[] # creating an empty [] to store row values in matrix 2
        for col in range(num_col):
            value = int(input("Enter row values of the second matrix: ")) # add values to matrix 2
-           matrix2_row.append(value)
+           matrix2_row.append(value) # The value will be saved in matri2_row
        m2.append(matrix2_row)
     
-   result = []
+   result = [] # creating a empty list to print the last result 
 
    for row in range(num_row):
        sum_of_row = [] # creating a new list to save the sum value in it
