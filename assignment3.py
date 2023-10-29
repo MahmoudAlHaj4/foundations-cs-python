@@ -99,6 +99,7 @@ def checkPalindrome(s):
     if s[0] == s[-1]:
         return checkPalindrome(s[-1])
     return False
+string = input("Enter a string: ")
 
 
 
@@ -114,6 +115,8 @@ def main():
         invertDictionary()
     elif choice == 4:
         convertMatrixToDictionary()
+    elif choice == 5:
+        print(checkPalindrome())
     
 
 main()
