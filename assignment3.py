@@ -104,6 +104,14 @@ def checkPalindrome(s):
     return False # if the string is not palindrome will return false
 string = input("Enter a string: ")
 
+def searchAndSort(lst,size):
+    new_lst = []
+    while len(lst)> size:
+        parts = lst[:size]
+        new_lst.append(parts)
+        lsts = lst[size:]
+    new_lst.append(lsts)
+    
 
 
 def main():
