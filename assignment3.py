@@ -128,7 +128,15 @@ def searchAndSort(lst,size):
 
 lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
 size = 1
+element = int(input("Enter the element to search for: "))
 
+if element in searchAndSort:
+    index = searchAndSort.index(element)
+    print("Element",element,"is found at index", index ,"in  list.")
+else:
+    print("Element"element," not found in the list.")
+result  = searchAndSort(lsst,size)
+print(result)
 
 
 def main():
