@@ -94,11 +94,14 @@ def convertMatrixToDictionary():
   print("your classroom is:",final_dict )
 
 def checkPalindrome(s):
-    if s == s[::-1]:
+    if s == s[::-1]: 
         return True
+        # the base case here is when the string is palindrome or reverse That's mean if string  = level and string[::-1] = level it will return true
     if s[0] == s[-1]:
-        return checkPalindrome(s[-1])
-    return False
+        return checkPalindrome(s[1:-1])
+        # If the first index of string  == the last index of string it will return the function it self and string[0],string[0] will be excluded
+        # string[-1] will be at first and it's going to loop again to check
+    return False # if the string is not palindrome will return false
 string = input("Enter a string: ")
 
 
@@ -116,7 +119,7 @@ def main():
     elif choice == 4:
         convertMatrixToDictionary()
     elif choice == 5:
-        print(checkPalindrome())
+        print(checkPalindrome(string))
     
 
 main()
