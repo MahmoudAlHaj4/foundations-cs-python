@@ -7,7 +7,7 @@ print("welcome", name)
 
 def displayMenu():
     print("The menu:\n","\t1.Add Matrices\n","\t2. Check Rotation\n","\t3. Invert Dictionary\n","\t4. Convert Matrix to Dictionary\n","\t5. Check Palindrome\n","\t6. Search for an Element & Merge Sort\n","\t7. Exit\n")
-
+    # printing the menu
 
 def addMatrices(m1,m2):
    num_row = int(input("Enter the number of row: ")) 
@@ -93,7 +93,7 @@ def convertMatrixToDictionary():
 
   print("your classroom is:",final_dict )
 
-def checkPalindrome(s):
+def checkPalindrome():
     if s == s[::-1]: 
         return True
         # the base case here is when the string is palindrome or reverse That's mean if string  = level and string[::-1] = level it will return true
@@ -102,7 +102,7 @@ def checkPalindrome(s):
         # If the first index of string  == the last index of string it will return the function it self and string[0],string[0] will be excluded
         # string[-1] will be at first and it's going to loop again to check
     return False # if the string is not palindrome will return false
-string = input("Enter a string: ")
+
 
 def searchAndSort(lst, size):
   element = int(input("Enter the element to search for:"))
@@ -154,7 +154,13 @@ def main():
     elif choice == 4:
         convertMatrixToDictionary()
     elif choice == 5:
-        print(checkPalindrome(string))
+      string = input("Enter a string: ")
+      if checkPalindrome(string):
+        print("The string is a palindrome.")
+      else:
+          print("The string is not a palindrome.")
+    elif choice == 6:
+            searchAndSort(lsst, size)
     
 
 main()
