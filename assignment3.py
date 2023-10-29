@@ -1,4 +1,4 @@
-#Question 1
+
 
 
 name = str(input("Enter your name: "))
