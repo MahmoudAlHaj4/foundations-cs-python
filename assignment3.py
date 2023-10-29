@@ -93,7 +93,13 @@ def convertMatrixToDictionary():
 
   print("your classroom is:",final_dict )
 
-convertMatrixToDictionary()
+def checkPalindrome(s):
+    if s == s[::-1]:
+        return True
+    if s[0] == s[-1]:
+        return checkPalindrome(s[-1])
+    return False
+
 
 
 def main():
@@ -108,6 +114,7 @@ def main():
         invertDictionary()
     elif choice == 4:
         convertMatrixToDictionary()
+    
 
 main()
 
