@@ -143,24 +143,29 @@ size = 1
 
 def main():
     displayMenu()
-
-    choice = int(input("enter your choice: "))
-    if choice == 1:
-        addMatrices(matrix1,matrix2)
-    elif choice == 2:
-        checkRotation(matrix1,matrix2)
-    elif choice == 3:
-        invertDictionary()
-    elif choice == 4:
-        convertMatrixToDictionary()
-    elif choice == 5:
-      string = input("Enter a string: ")
-      if checkPalindrome(string):
-        print("The string is a palindrome.")
-      else:
-          print("The string is not a palindrome.")
-    elif choice == 6:
+    choice = 0
+    while choice !=7:
+        choice = int(input("enter your choice: "))
+        if choice == 1:
+            addMatrices(matrix1,matrix2)
+        elif choice == 2:
+            checkRotation(matrix1,matrix2)
+        elif choice == 3:
+            invertDictionary()
+        elif choice == 4:
+            convertMatrixToDictionary()
+        elif choice == 5:
+        string = input("Enter a string: ")
+            if checkPalindrome(string):
+                print("The string is a palindrome.")
+            else:
+                print("The string is not a palindrome.")
+        elif choice == 6:
             searchAndSort(lsst, size)
+        elif choice != 7:
+            print("Invalid Input")
+    print("You left\n")
+        
     
 
 main()
