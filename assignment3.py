@@ -105,31 +105,31 @@ def checkPalindrome():
 
 
 def searchAndSort(lst, size):
-  element = int(input("Enter the element to search for:"))
+  element = int(input("Enter the element to search for:")) # input for seraching
   new_lst = []
 
-  while len(lst) > size:
-      parts = lst[:size]
+  while len(lst) > size: 
+      parts = lst[:size] # taking elements from the beginning of the list at index size and put it in a new list called parts 
       new_lst.append(parts)
-      lst = lst[size:]
+      lst = lst[size:] # this will update the new list 
 
   new_lst.append(lst)
 
   result = []
   for x in new_lst:
-      result.extend(x)
+      result.extend(x) # search for it to add the parts and create a  1 list I
 
   sorted_lst = []
 
-  while result:
+  while result: # using while loops for searching for the smaller number and sort it 
       small = result[0]
       for x in result:
           if x < small:
               small = x
-      sorted_lst.append(small)
-      result.remove(small)
+      sorted_lst.append(small) # will add it to the sorted list
+      result.remove(small) # remove the old small
 
-  if element in sorted_lst:
+  if element in sorted_lst: # for checking if the elemet is in the list or not
       index = sorted_lst.index(element)
       print(f"Element {element} is found at index {index} in the list.")
   else:
