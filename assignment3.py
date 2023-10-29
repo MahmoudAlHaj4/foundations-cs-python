@@ -116,6 +116,19 @@ def searchAndSort(lst,size):
     for x in new_lst:
         result.extend(x) # search about it to get again a 1 list 
 
+    sorted_lst = []
+    while result:
+        small = result[0]
+        for x in result:
+            if x < small:
+                small = x
+            sorted_lst.append(small)
+            result.remove(small)
+    return sorted_lst
+
+lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
+size = 1
+
 
 
 def main():
