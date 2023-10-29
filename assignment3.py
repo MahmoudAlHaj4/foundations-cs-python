@@ -104,39 +104,41 @@ def checkPalindrome(s):
     return False # if the string is not palindrome will return false
 string = input("Enter a string: ")
 
-def searchAndSort(lst,size):
-    new_lst = [] 
-    while len(lst)> size:
-        parts = lst[:size]
-        new_lst.append(parts)
-        lsts = lst[size:]
-    new_lst.append(lsts)
+def searchAndSort(lst, size):
+  element = int(input("Enter the element to search for:"))
+  new_lst = []
 
-    result = []
-    for x in new_lst:
-        result.extend(x) # search about it to get again a 1 list 
+  while len(lst) > size:
+      parts = lst[:size]
+      new_lst.append(parts)
+      lst = lst[size:]
 
-    sorted_lst = []
-    while result:
-        small = result[0]
-        for x in result:
-            if x < small:
-                small = x
-            sorted_lst.append(small)
-            result.remove(small)
-    return sorted_lst
+  new_lst.append(lst)
+
+  result = []
+  for x in new_lst:
+      result.extend(x)
+
+  sorted_lst = []
+
+  while result:
+      small = result[0]
+      for x in result:
+          if x < small:
+              small = x
+      sorted_lst.append(small)
+      result.remove(small)
+
+  if element in sorted_lst:
+      index = sorted_lst.index(element)
+      print(f"Element {element} is found at index {index} in the list.")
+  else:
+      print(f"Element {element} not found in the list.")
+
+  print("Sorted list:", sorted_lst)
 
 lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
 size = 1
-element = int(input("Enter the element to search for: "))
-
-if element in searchAndSort:
-    index = searchAndSort.index(element)
-    print("Element",element,"is found at index", index ,"in  list.")
-else:
-    print("Element"element," not found in the list.")
-result  = searchAndSort(lsst,size)
-print(result)
 
 
 def main():
