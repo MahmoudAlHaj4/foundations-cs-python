@@ -93,7 +93,7 @@ def convertMatrixToDictionary():
 
   print("your classroom is:",final_dict )
 
-def checkPalindrome():
+def checkPalindrome(s):
     if s == s[::-1]: 
         return True
         # the base case here is when the string is palindrome or reverse That's mean if string  = level and string[::-1] = level it will return true
