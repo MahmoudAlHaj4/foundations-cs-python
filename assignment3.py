@@ -105,13 +105,17 @@ def checkPalindrome(s):
 string = input("Enter a string: ")
 
 def searchAndSort(lst,size):
-    new_lst = []
+    new_lst = [] 
     while len(lst)> size:
         parts = lst[:size]
         new_lst.append(parts)
         lsts = lst[size:]
     new_lst.append(lsts)
-    
+
+    result = []
+    for x in new_lst:
+        result.extend(x) # search about it to get again a 1 list 
+
 
 
 def main():
