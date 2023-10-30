@@ -74,7 +74,7 @@ def convertMatrixToDictionary():
   final_dict = {} 
   num_emp = int(input("Enter the number of employees: "))
   # creating a dit to store the the final result 
-
+  # O(N) because the first loop is O(1) but the nested loop is O(N) and N being the value of the num of employees
   for row in range(1,num_emp+1): 
       result =[] 
       # creating a  nested loops to store the values to a matrix 
