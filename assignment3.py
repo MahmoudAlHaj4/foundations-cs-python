@@ -109,7 +109,7 @@ def checkPalindrome(s):
 def searchAndSort(lst, size):
   element = int(input("Enter the element to search for:")) # input for seraching
   new_lst = []
-
+    # O(N^2) N being the length of the list
   while len(lst) > size: 
       parts = lst[:size] # taking elements from the beginning of the list at index size and put it in a new list called parts 
       new_lst.append(parts)
