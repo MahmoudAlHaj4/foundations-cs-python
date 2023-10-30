@@ -15,7 +15,7 @@ def addMatrices(m1,m2):
    # inputs to get the number of rows and cols for the Matrix
 
    
-
+    # O(N^2) because N is being the product of num of rows and num of cols
    
    for row in range(num_row): # creating a loop to add rows and cols for matrix 1 
        matrix1_row = [] # creating an empty [] to store row values in matrix 1
