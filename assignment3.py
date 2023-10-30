@@ -51,6 +51,7 @@ def checkRotation(matrix1,matrix2):
 
 
 def invertDictionary():
+    # O(N) N being the value of num of values
     my_dict = {} 
     num_values = int(input("Enter the number of values: ")) 
     # creating an input to get the number of values in dict
