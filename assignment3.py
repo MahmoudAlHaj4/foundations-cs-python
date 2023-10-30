@@ -146,6 +146,7 @@ size = 1
 def main():
     displayMenu()
     choice = 0
+    # O(N) N being the number of time the user choice a number
     while choice !=7:
         choice = int(input("enter your choice: "))
         if choice == 1:
