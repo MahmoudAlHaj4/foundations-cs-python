@@ -158,7 +158,7 @@ def main():
         elif choice == 4:
             convertMatrixToDictionary()
         elif choice == 5:
-        string = input("Enter a string: ")
+            string = input("Enter a string: ")
             if checkPalindrome(string):
                 print("The string is a palindrome.")
             else:
