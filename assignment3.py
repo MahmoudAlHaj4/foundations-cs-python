@@ -139,14 +139,19 @@ def merge(lst,left,mid,right):
             lst[index_merge] =right_lst[index_r]
             index_r +=1
             index_merge +=1
+
     while index_l < left_size:
         lst[index_merge] =left_lst[index_l]
         index_l +=1
         index_merge +=1
     
+    while index_r< right_size:
+        lst[index_merge] = right_lst[index_r]
+        index_r +=1
+        index_merge += 1
 
 
-lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
+lst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
 
 
 # testing
