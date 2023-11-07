@@ -122,7 +122,7 @@ def merge(lst,left,mid,right):
     right_lst =[0]*(right_size)
 
     for x in range(0,left_size):
-        lst[x] = lst[left + x]
+        left_lst[x] = lst[left + x]
     for y in range(0, right_size):
         lst[y] = lst[mid + 1 + y]
 
