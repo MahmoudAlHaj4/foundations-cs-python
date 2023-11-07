@@ -55,7 +55,7 @@ def invertDictionary():
     my_dict = {} 
     num_values = int(input("Enter the number of values: ")) 
     # creating an input to get the number of values in dict
-
+    values_key =[]
     for x in range(num_values): # creating a loop to get from the user the key and the value 
         key = input("Enter your key: ")
         value = input("Enter a value: ")
@@ -65,6 +65,8 @@ def invertDictionary():
         else:
             my_dict[value].append(key)
             # the dict[value] will add the key
+        
+
 
     print("Your dictionary is:")
     print(my_dict)
@@ -106,41 +108,17 @@ def checkPalindrome(s):
     return False # if the string is not palindrome will return false
 
 
-def searchAndSort(lst, size):
-  element = int(input("Enter the element to search for:")) # input for seraching
-  new_lst = []
-    # O(N^2) N being the length of the list
-  while len(lst) > size: 
-      parts = lst[:size] # taking elements from the beginning of the list at index size and put it in a new list called parts 
-      new_lst.append(parts)
-      lst = lst[size:] # this will update the new list 
-
-  new_lst.append(lst)
-
-  result = []
-  for x in new_lst:
-      result.extend(x) # search for it to add the parts and create a  1 list I
-
-  sorted_lst = []
-
-  while result: # using while loops for searching for the smaller number and sort it 
-      small = result[0]
-      for x in result:
-          if x < small:
-              small = x
-      sorted_lst.append(small) # will add it to the sorted list
-      result.remove(small) # remove the old small
-
-  if element in sorted_lst: # for checking if the elemet is in the list or not
-      index = sorted_lst.index(element)
-      print(f"Element {element} is found at index {index} in the list.")
-  else:
-      print(f"Element {element} not found in the list.")
-
-  print("Sorted list:", sorted_lst)
+def mergeSort(lst,left,right):
+    if left<right:
+        mid = (left+right)//2
+        mergeSort(lst, left, mid)
+        mergeSort(lst, mid+1,right)
+        merge(lst,left,mid,right)
+        
+def merge(lst,left,mid,right)
 
 lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
-size = 1
+
 
 # testing
 def main():
