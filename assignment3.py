@@ -116,7 +116,7 @@ def mergeSort(lst,left,right):
         merge(lst,left,mid,right)
         
 def merge(lst,left,mid,right):
-    left_size = mid -left +1
+    left_size = mid - left +1
     right_size = right - mid
     left_lst = [0]*(left_size)
     right_lst =[0]*(right_size)
@@ -125,8 +125,22 @@ def merge(lst,left,mid,right):
         lst[x] = lst[left + x]
     for y in range(0, right_size):
         lst[y] = lst(mid + 1 + y)
+
+    index_l = 0
+    index_r = 0
+    index_merge = left
+
+    while index_l < left_size and index_r< right_size:
+        if left_lst[index_l]<= right_lst[index_r]:
+            lst[index_merge] = left_lst[index_l]
+            index_l +=1
+            index_merge +=1
+        else:
+            lst[index_merge] =right_lst[index_r]
+            index_r +=1
+            index_merge +=1
     
-    
+
 
 lsst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
 
