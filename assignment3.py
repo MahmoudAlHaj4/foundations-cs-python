@@ -152,6 +152,7 @@ def merge(lst,left,mid,right):
 
 
 lst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
+mergeSort(lst,0,len(lst)-1)
 
 
 # testing
