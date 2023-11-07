@@ -124,7 +124,7 @@ def merge(lst,left,mid,right):
     for x in range(0,left_size):
         left_lst[x] = lst[left + x]
     for y in range(0, right_size):
-        lst[y] = lst[mid + 1 + y]
+        right_lst[y] = lst[mid + 1 + y]
 
     index_l = 0
     index_r = 0
@@ -150,9 +150,9 @@ def merge(lst,left,mid,right):
         index_r +=1
         index_merge += 1
 
-
+print()
+print("Merge Sort:")
 lst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
-
 
 
 # testing
@@ -177,7 +177,9 @@ def main():
             else:
                 print("The string is not a palindrome.")
         elif choice == 6:
-            mergeSort(lst,0,len(lst)-1)
+            print("The unsorted list is:", lst)
+            mergeSort(lst, 0, len(lst) - 1)
+            print("The sorted list is:", lst)
         elif choice != 7:
             print("Invalid Input")
     print("You left\n")
