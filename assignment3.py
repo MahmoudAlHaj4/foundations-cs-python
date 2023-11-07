@@ -152,7 +152,7 @@ def merge(lst,left,mid,right):
 
 
 lst = [2, 8, 3, 6, 5, 10, 7, 4, 9, 1]
-mergeSort(lst,0,len(lst)-1)
+
 
 
 # testing
@@ -177,7 +177,7 @@ def main():
             else:
                 print("The string is not a palindrome.")
         elif choice == 6:
-            searchAndSort(lsst, size)
+            mergeSort(lst,0,len(lst)-1)
         elif choice != 7:
             print("Invalid Input")
     print("You left\n")
