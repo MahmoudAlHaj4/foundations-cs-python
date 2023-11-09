@@ -8,6 +8,14 @@ def openTab():
     num_of_tabs = int(input("Enter the number of tabs: "))
     for x in range(1,num_of_tabs+1):
         new_dict ={}
+        for y in range(1):
+            title = input("Enter the website title: ")
+            url = input("Enter the website url:  ")
+            new_dict = lst_for_tap.append(title)
+            new_dict = num_of_tabs.append(url)
+        id = "ID" + str(x)
+        dict_for_tabs[id] = new_dict
+        print(dict_for_tabs)
         
 
 def main():
