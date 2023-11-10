@@ -7,16 +7,16 @@ class BrowserTabsSimulation:
 
     def openTab(self):
         
-        num_of_tabs = int(input("Enter the number of tabs: "))
-        for x in range(1,num_of_tabs+1):
-            new_dict ={}
+        
+        for x in range(1):
+            lst_content =[]
             for y in range(1):
                 title = input("Enter the website title: ")
                 url = input("Enter the website url:  ")
-                new_dict['title'] = title
-                new_dict['url'] = url
+                lst_content.append(title)
+                lst_content.append(url)
             id = "ID" + str(len(self.dict_for_tabs)+1)
-            self.dict_for_tabs[id] = new_dict
+            self.dict_for_tabs[id] = lst_content
             print(self.dict_for_tabs)
 
     def closeTab(self):
