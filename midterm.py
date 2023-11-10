@@ -25,7 +25,7 @@ def main():
     while choice != 9:
         choice = int(input("Enter Your Choice: "))
         if choice == 1:
-            return openTab()
+            openTab()
         elif choice == 2:
             print("close Tab")
         elif choice  == 3:
