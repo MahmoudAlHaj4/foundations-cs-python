@@ -24,13 +24,19 @@ class BrowserTabsSimulation:
         if index in self.dict_for_tabs:
             del self.dict_for_tabs[index]
         else:
-            print("Not found")
+            print("Not Found")
     
     def displayAll(self):
         print("The tabs: ")
         print(self.dict_for_tabs)
     
-        
+    
+    def switchTab(self):
+        index = input("Enter the index you want to switch: ").upper()  
+        if index in self.dict_for_tabs:
+            print()
+        else:
+            print("Not Found")
 
 def main():
     browser = BrowserTabsSimulation()
