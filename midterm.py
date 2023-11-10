@@ -1,3 +1,5 @@
+import requests
+from bs4 import BeautifulSoup
 class BrowserTabsSimulation:
     def __init__(self):
         self.dict_for_tabs = {}
@@ -34,7 +36,11 @@ class BrowserTabsSimulation:
     def switchTab(self):
         index = input("Enter the index you want to switch: ").upper()  
         if index in self.dict_for_tabs:
-            print()
+            page = requests.get(self.dict_for_tabs[index][1])
+            src = page.content
+            soup = BeautifulSoup(src, 'html.parser')
+            print(soup.prettify())
+        
         else:
             print("Not Found")
 
@@ -50,7 +56,7 @@ def main():
         elif choice == 2:
             browser.closeTab()
         elif choice  == 3:
-            print("Switch Tab")
+            browser.switchTab()
         elif choice  == 4:
             browser.displayAll()
         elif choice == 5:
