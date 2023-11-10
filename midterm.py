@@ -34,6 +34,7 @@ def main():
 
     choice = 0 
     while choice != 9:
+        browser.displayMenu()
         choice = int(input("Enter Your Choice: "))
         if choice == 1:
             browser.openTab()
