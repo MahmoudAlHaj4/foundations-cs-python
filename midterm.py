@@ -30,7 +30,6 @@ class BrowserTabsSimulation:
 
 def main():
     browser = BrowserTabsSimulation()
-    browser.displayMenu()
 
     choice = 0 
     while choice != 9:
