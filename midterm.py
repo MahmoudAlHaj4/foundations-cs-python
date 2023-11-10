@@ -15,12 +15,12 @@ class BrowserTabsSimulation:
                 url = input("Enter the website url:  ")
                 new_dict['title'] = title
                 new_dict['url'] = url
-            id = "ID" + str(x)
+            id = "ID" + str(len(self.dict_for_tabs)+1)
             self.dict_for_tabs[id] = new_dict
             print(self.dict_for_tabs)
 
     def closeTab(self):
-        index = input("Enter index of the tab you want to close: ")
+        index = input("Enter index of the tab you want to close: ").upper()
         if index in self.dict_for_tabs:
             del self.dict_for_tabs[index]
         else:
