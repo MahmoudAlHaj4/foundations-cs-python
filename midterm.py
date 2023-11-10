@@ -16,6 +16,9 @@ def openTab():
         id = "ID" + str(x)
         dict_for_tabs[id] = new_dict
         print(dict_for_tabs)
+
+def closeTab():
+    index = input("Enter index of the tab you want to close: ")
         
 
 def main():
