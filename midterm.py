@@ -26,6 +26,10 @@ class BrowserTabsSimulation:
         else:
             print("Not found")
     
+    def displayAll(self):
+        print("The tabs: ")
+        print(self.dict_for_tabs)
+    
         
 
 def main():
@@ -42,7 +46,7 @@ def main():
         elif choice  == 3:
             print("Switch Tab")
         elif choice  == 4:
-            print("Display All Tabs")
+            browser.displayAll()
         elif choice == 5:
             print("Open Nested Tab")
         elif choice == 6:
