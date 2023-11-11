@@ -61,6 +61,8 @@ class BrowserTabsSimulation:
                 new.update(nested_dict) #https://stackoverflow.com/questions/8930915/append-a-dictionary-to-a-dictionary
                 self.dict_for_tabs = new
                 print(self.dict_for_tabs)
+        else:
+            print("Not found")
         
     def clearTabs(self):
         del self.dict_for_tabs
