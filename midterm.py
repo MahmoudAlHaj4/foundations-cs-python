@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 class BrowserTabsSimulation: 
     def __init__(self):
         self.dict_for_tabs = {}
-        self.lst_content =[]
 
     def displayMenu(self):
         # function for display menu
