@@ -18,10 +18,10 @@ class BrowserTabsSimulation:
             for y in range(1):
                 title = input("Enter the website title: ")
                 url = input("Enter the website url:  ")
-                self.lst_content.append(title)
-                self.lst_content.append(url)
+                lst_content.append(title)
+                lst_content.append(url)
             id = "ID" + str(len(self.dict_for_tabs)+1)
-            self.dict_for_tabs[id] = self.lst_content
+            self.dict_for_tabs[id] = lst_content
             print(self.dict_for_tabs)
 
     def closeTab(self):
@@ -57,9 +57,15 @@ class BrowserTabsSimulation:
                     nested_url = input("Enter a url: ")
                     nested_dict['title'] = nested_title
                     nested_dict['url'] = nested_url
-                    self.lst_content.append(nested_dict)
-                self.dict_for_tabs[index] = self.lst_content
+                    
+                new = self.dict_for_tabs.copy() 
+                new.update(nested_dict) #https://stackoverflow.com/questions/8930915/append-a-dictionary-to-a-dictionary
+                self.dict_for_tabs = new
                 print(self.dict_for_tabs)
+        
+    def clearTabs(self):
+        self.dict_for_tabs.clear()
+        print(self.dict_for_tabs)
         
 
 def main():
