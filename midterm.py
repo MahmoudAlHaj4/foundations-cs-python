@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 class BrowserTabsSimulation: 
     def __init__(self):
         self.dict_for_tabs = {}
+        self.lst_content =[]
 
     def displayMenu(self):
         # function for display menu
@@ -13,14 +14,13 @@ class BrowserTabsSimulation:
         # open tab function to create a tab
         # O(1) 
         for x in range(1):
-            lst_content =[]
             for y in range(1):
                 title = input("Enter the website title: ")
                 url = input("Enter the website url:  ")
-                lst_content.append(title)
-                lst_content.append(url)
+                self.lst_content.append(title)
+                self.lst_content.append(url)
             id = "ID" + str(len(self.dict_for_tabs)+1)
-            self.dict_for_tabs[id] = lst_content
+            self.dict_for_tabs[id] = self.lst_content
             print(self.dict_for_tabs)
 
     def closeTab(self):
@@ -47,7 +47,18 @@ class BrowserTabsSimulation:
             print("Not Found")
     
     def openNestedTab(self):
-        index = input("Enter he index where you want to insert additional tabs:").upper()
+        index = input("Enter the index where you want to insert additional tab:").upper()
+        if index in self.dict_for_tabs:
+            for x in range(1):
+                for y in range(1):
+                    nested_dict = {}
+                    nested_title = input("Enter a tittle: ")
+                    nested_url = input("Enter a url: ")
+                    nested_dict['title'] = nested_title
+                    nested_dict['url'] = nested_url
+                    self.lst_content.append(nested_dict)
+                self.dict_for_tabs[index] = self.lst_content
+                print(self.dict_for_tabs)
         
 
 def main():
@@ -66,7 +77,7 @@ def main():
         elif choice  == 4:
             browser.displayAll()
         elif choice == 5:
-            print("Open Nested Tab")
+            browser.openNestedTab()
         elif choice == 6:
             print("Clear All Tabs")
         elif choice == 7:
