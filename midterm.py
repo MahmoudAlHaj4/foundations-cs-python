@@ -47,7 +47,8 @@ class BrowserTabsSimulation:
             print("Not Found")
     
     def openNestedTab(self):
-        pass
+        index = input("Enter he index where you want to insert additional tabs:").upper()
+        
 
 def main():
     browser = BrowserTabsSimulation()
