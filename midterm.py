@@ -1,15 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
-class BrowserTabsSimulation:
+
+class BrowserTabsSimulation: 
     def __init__(self):
         self.dict_for_tabs = {}
 
     def displayMenu(self):
+        # function for display menu
         print("The Menu:\n", "\t1. Open Tab\n","\t2. Close Tab\n","\t3. Switch Tab\n","\t4. Display All Tabs\n","\t5. Open Nested Tab\n","\t6. Clear All Tabs\n","\t7. Save Tabs\n","\t8. Import Tabs\n","\t9. Exit\n")
 
     def openTab(self):
-        
-        
+        # open tab function to create a tab
+        # O(1) 
         for x in range(1):
             lst_content =[]
             for y in range(1):
@@ -36,7 +38,7 @@ class BrowserTabsSimulation:
     def switchTab(self):
         index = input("Enter the index you want to switch: ").upper()  
         if index in self.dict_for_tabs:
-            page = requests.get(self.dict_for_tabs[index][1])
+            page = requests.get(self.dict_for_tabs[index][1]) # https://www.youtube.com/watch?v=taL3r_JpwBg # https://realpython.com/beautiful-soup-web-scraper-python/
             src = page.content
             soup = BeautifulSoup(src, 'html.parser')
             print(soup.prettify())
