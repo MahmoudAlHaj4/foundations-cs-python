@@ -63,7 +63,7 @@ class BrowserTabsSimulation:
                 print(self.dict_for_tabs)
         
     def clearTabs(self):
-        self.dict_for_tabs.clear()
+        del self.dict_for_tabs
         print(self.dict_for_tabs)
         
 
