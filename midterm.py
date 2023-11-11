@@ -27,6 +27,9 @@ class BrowserTabsSimulation:
         index = input("Enter index of the tab you want to close: ").upper()
         if index in self.dict_for_tabs:
             del self.dict_for_tabs[index]
+        elif index == "":
+            last_id = "ID" + str(len(self.dict_for_tabs))
+            del self.dict_for_tabs[last_id]
         else:
             print("Not Found")
     
