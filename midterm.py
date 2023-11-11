@@ -86,7 +86,7 @@ def main():
         elif choice == 5:
             browser.openNestedTab()
         elif choice == 6:
-            print("Clear All Tabs")
+            browser.clearTabs()
         elif choice == 7:
             print("Save Tabs")
         elif choice == 8:
