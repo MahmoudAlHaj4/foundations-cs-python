@@ -45,7 +45,9 @@ class BrowserTabsSimulation:
         
         else:
             print("Not Found")
-    # test 5
+    
+    def opennestedTab(self):
+        pass
 
 def main():
     browser = BrowserTabsSimulation()
