@@ -14,6 +14,7 @@ class BrowserTabsSimulation:
         # open tab function to create a tab
         # O(1) 
         for x in range(1):
+            lst_content =[]
             for y in range(1):
                 title = input("Enter the website title: ")
                 url = input("Enter the website url:  ")
