@@ -93,6 +93,7 @@ for x in range(1,user_number+1):
 for x in range(user_number -1 ,0,-1):
   print("*" * x) #O(N)
 #####
+#
 # Question 6
 
 number1 = eval(input("Enter the first number: "))
