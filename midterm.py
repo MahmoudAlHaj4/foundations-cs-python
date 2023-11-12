@@ -41,7 +41,7 @@ class BrowserTabsSimulation:
     def switchTab(self):
         index = input("Enter the index you want to switch: ").upper()  
         if index in self.dict_for_tabs:
-            page = requests.get(self.dict_for_tabs[index][1]) # https://www.youtube.com/watch?v=taL3r_JpwBg # https://realpython.com/beautiful-soup-web-scraper-python/
+            page = requests.get(self.dict_for_tabs[index]['url']) # https://www.youtube.com/watch?v=taL3r_JpwBg # https://realpython.com/beautiful-soup-web-scraper-python/
             src = page.content
             soup = BeautifulSoup(src, 'html.parser')
             print(soup.prettify())
@@ -67,7 +67,7 @@ class BrowserTabsSimulation:
             print("Not found")
         
     def clearTabs(self):
-        del self.dict_for_tabs
+        self.dict_for_tabs.clear()
         print(self.dict_for_tabs)
         
 
