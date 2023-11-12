@@ -60,9 +60,8 @@ class BrowserTabsSimulation:
                     nested_dict['title'] = nested_title
                     nested_dict['url'] = nested_url
                     
-                new = self.dict_for_tabs.copy() 
-                new.update(nested_dict) #https://stackoverflow.com/questions/8930915/append-a-dictionary-to-a-dictionary
-                self.dict_for_tabs = new
+                id = str(index) + "0"+ str(len(self.dict_for_tabs)+1)
+                self.dict_for_tabs.setdefault(id,nested_dict) # https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method
                 print(self.dict_for_tabs)
         else:
             print("Not found")
