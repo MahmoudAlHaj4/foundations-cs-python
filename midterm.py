@@ -82,7 +82,7 @@ class BrowserTabsSimulation:
             self.nested_tab_id_counter += 1
             self.openNestedTab()
             
-                # This function is created for craeting nested dict and pass it to a tab
+                # This function is creating a nested recursivelly
         else:
             print("Not found")
         
