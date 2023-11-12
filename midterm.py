@@ -50,6 +50,13 @@ class BrowserTabsSimulation:
             soup = BeautifulSoup(src, 'html.parser')
             print(soup.prettify())
         
+            for key,value in self.dict_for_tabs.items():
+                if "The Nested Tab" in value:
+                    page2 = requests.get(self.dict_for_tabs[key]['The Nested Tab']['url'])
+                    src2 = page2.content
+                    soup2 = BeautifulSoup(src2,'html.parser')
+                    print("The Nested is:",soup2.prettify())
+        
         else:
             print("Not Found")
     
