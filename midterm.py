@@ -5,6 +5,7 @@ import os
 class BrowserTabsSimulation: 
     def __init__(self):
         self.dict_for_tabs = {}
+        self.nested_tab_id_counter = 0
 
     def displayMenu(self):
         # function for display menu
@@ -67,18 +68,20 @@ class BrowserTabsSimulation:
     def openNestedTab(self):
         # O(N) N being the length of the nested tab
         index = input("Enter the index where you want to insert additional tab:").upper()
-        if index in self.dict_for_tabs:
-            for x in range(1):
-                for y in range(1):
-                    nested_dict = {}
-                    nested_title = input("Enter a tittle: ")
-                    nested_url = input("Enter a url: ")
-                    nested_dict['title'] = nested_title
-                    nested_dict['url'] = nested_url
-                    
 
-                self.dict_for_tabs.setdefault(index, {}).setdefault("The Nested Tab" ,nested_dict) #1) https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method  2)https://stackoverflow.com/questions/30881453/dict-setdefaultkey-append-get-rid-of-additional-list 3)https://codereview.stackexchange.com/questions/253195/nested-dictionary-creation-with-setdefault
-                print(self.dict_for_tabs)
+        if index in self.dict_for_tabs:
+            nested_dict = {}
+            nested_title = input("Enter a tittle: ")
+            nested_url = input("Enter a url: ")
+            nested_dict['title'] = nested_title
+            nested_dict['url'] = nested_url
+            id = 'The Nested Tab' + str(self.nested_tab_id_counter)
+            print(['id',id])
+            self.dict_for_tabs.setdefault(id ,{}).update(nested_dict) #1) https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method  2)https://stackoverflow.com/questions/30881453/dict-setdefaultkey-append-get-rid-of-additional-list 3)https://codereview.stackexchange.com/questions/253195/nested-dictionary-creation-with-setdefault
+            print(self.dict_for_tabs)
+            self.nested_tab_id_counter += 1
+            self.openNestedTab()
+            
                 # This function is created for craeting nested dict and pass it to a tab
         else:
             print("Not found")
