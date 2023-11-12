@@ -61,7 +61,7 @@ class BrowserTabsSimulation:
                     nested_dict['url'] = nested_url
                     
                 id = str(index) + "0"+ str(len(self.dict_for_tabs)+1)
-                self.dict_for_tabs.setdefault(id,nested_dict) # https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method
+                self.dict_for_tabs.setdefault(index, []).append({"The nested Tab": nested_dict}) #1) https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method  2)https://stackoverflow.com/questions/30881453/dict-setdefaultkey-append-get-rid-of-additional-list
                 print(self.dict_for_tabs)
         else:
             print("Not found")
