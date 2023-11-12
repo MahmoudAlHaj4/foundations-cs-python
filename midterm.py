@@ -13,12 +13,12 @@ class BrowserTabsSimulation:
         # open tab function to create a tab
         # O(1) 
         for x in range(1):
-            lst_content =[]
+            lst_content = {}
             for y in range(1):
                 title = input("Enter the website title: ")
                 url = input("Enter the website url:  ")
-                lst_content.append(title)
-                lst_content.append(url)
+                lst_content['title'] = title
+                lst_content['url'] = url
             id = "ID" + str(len(self.dict_for_tabs)+1)
             self.dict_for_tabs[id] = lst_content
             print(self.dict_for_tabs)
@@ -61,7 +61,7 @@ class BrowserTabsSimulation:
                     nested_dict['url'] = nested_url
                     
                 id = str(index) + "0"+ str(len(self.dict_for_tabs)+1)
-                self.dict_for_tabs.setdefault(index, []).append({"The nested Tab": nested_dict}) #1) https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method  2)https://stackoverflow.com/questions/30881453/dict-setdefaultkey-append-get-rid-of-additional-list
+                self.dict_for_tabs.setdefault(index, {}).setdefault("The Nested Tab" ,nested_dict) #1) https://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method  2)https://stackoverflow.com/questions/30881453/dict-setdefaultkey-append-get-rid-of-additional-list 3)https://codereview.stackexchange.com/questions/253195/nested-dictionary-creation-with-setdefault
                 print(self.dict_for_tabs)
         else:
             print("Not found")
