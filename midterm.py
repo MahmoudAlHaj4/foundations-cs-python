@@ -38,6 +38,8 @@ class BrowserTabsSimulation:
         print("The tabs: ")
         for key,value in self.dict_for_tabs.items():
             print("The titles :", value['title'])
+            if "The Nested Tab" in value:
+                print("\t The nested Tab:", self.dict_for_tabs[key]["The Nested Tab"]['title']) #1) https://stackoverflow.com/questions/10399614/accessing-value-inside-nested-dictionaries 2)https://www.programiz.com/python-programming/nested-dictionary
     
     
     def switchTab(self):
