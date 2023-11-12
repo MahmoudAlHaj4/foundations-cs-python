@@ -96,7 +96,7 @@ class BrowserTabsSimulation:
 
         if os.path.exists(file):
             with open(file,"r") as file:
-                self.dict_for_tabs = json.load(file)
+                self.dict_for_tabs = json.load(file) # 1)https://www.youtube.com/watch?v=FABwNhZA9pk 2)https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/amp/
                 print("You Import a tab:")
         else:
             print("Invalid path")
