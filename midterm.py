@@ -49,7 +49,7 @@ class BrowserTabsSimulation:
             src = page.content
             soup = BeautifulSoup(src, 'html.parser')
             print(soup.prettify())
-        
+
             for key,value in self.dict_for_tabs.items():
                 if "The Nested Tab" in value:
                     page2 = requests.get(self.dict_for_tabs[key]['The Nested Tab']['url'])
