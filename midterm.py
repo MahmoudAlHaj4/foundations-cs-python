@@ -90,6 +90,17 @@ class BrowserTabsSimulation:
                 print("You saved the tab")
         else:
             print("Invalid path")
+    
+    def importTab(self):
+        file  = input("Enter the file you want to load: ")
+
+        if os.path.exists(file):
+            with open(file,"r") as file:
+                self.dict_for_tabs = json.load(file)
+                print("You Import a tab:")
+        else:
+            print("Invalid path")
+
         
 
 def main():
@@ -114,7 +125,7 @@ def main():
         elif choice == 7:
             browser.saveTab()
         elif choice == 8:
-            print("Import Tabs")
+            browser.importTab()
         elif choice != 9:
             print("Invalid Input Please try again")
     print("You left")
