@@ -36,7 +36,8 @@ class BrowserTabsSimulation:
     
     def displayAll(self):
         print("The tabs: ")
-        print(self.dict_for_tabs)
+        for key,value in self.dict_for_tabs.items():
+            print("The titles :", value['title'])
     
     
     def switchTab(self):
