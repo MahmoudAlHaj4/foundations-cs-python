@@ -70,6 +70,8 @@ class BrowserTabsSimulation:
         index = input("Enter the index where you want to insert additional tab:").upper()
 
         if index in self.dict_for_tabs:
+            for x in range(1):
+                for y in range(1):
             nested_dict = {}
             nested_title = input("Enter a tittle: ")
             nested_url = input("Enter a url: ")
