@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-
+import json 
+import os
 class BrowserTabsSimulation: 
     def __init__(self):
         self.dict_for_tabs = {}
@@ -69,6 +70,16 @@ class BrowserTabsSimulation:
     def clearTabs(self):
         self.dict_for_tabs.clear()
         print(self.dict_for_tabs)
+    
+    def saveTab(self):
+        file = input("Enter the file path you want to save in it: ")
+
+        if os.path.exists(file):
+            with open(file,"w") as file:
+                json.dump(self.dict_for_tabs,file)
+                print("You saved the tab")
+        else:
+            print("Invalid path")
         
 
 def main():
@@ -91,7 +102,7 @@ def main():
         elif choice == 6:
             browser.clearTabs()
         elif choice == 7:
-            print("Save Tabs")
+            browser.saveTab()
         elif choice == 8:
             print("Import Tabs")
         elif choice != 9:
