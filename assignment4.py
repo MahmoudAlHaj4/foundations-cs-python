@@ -8,6 +8,7 @@ class Node: #Class Node
     def __init__(self,info):
         self.head = None
         self.info = info
+        self.next = None
         
 class LinkedList:
     def __init__(self):
