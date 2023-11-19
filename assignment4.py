@@ -14,6 +14,12 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    def displayNodes(self):
+        current = self.head
+        while current != None:
+            print(current.info,end=" ")
+            current = current.next
+
 def main():
     print()
     displayMenu()
