@@ -28,7 +28,32 @@ class LinkedList:
             print(current.info,end=" ")
             current = current.next
     def pickChoice(self):
-        print("The menu:\n", "\ta. Add Node\n","\tb. Display Nodes\n","\tc. Search and Delete Node\n","\td. Return to main menu")
+        choice = 0 
+        while choice != "4":
+            print("The menu:\n", "\t1. Add Node\n","\t2. Display Nodes\n","\t3. Search and Delete Node\n","\t4. Return to main menu")
+            choice = (input("Pick: "))
+            if choice == "1":
+                value = int(input("Enter a value of node: "))
+                new_node = Node(value)
+                if self.head is None:
+                    self.head = new_node
+                else:
+                    current = self.head
+                    while current.next is not None:
+                        current = current.next
+                    current.next = new_node
+            elif choice == "2":
+                print()
+                self.displayNodes()
+                print()
+            elif choice == "3":
+                print("serach and dele")
+            elif choice != "4":
+                print("Invalid Input")
+        print("You Left")
+            
+                        
+        
     
 
 def main():
