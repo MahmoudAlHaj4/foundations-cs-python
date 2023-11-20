@@ -18,6 +18,13 @@ class LinkedList:
         current = self.head
         size = 0 
         while current != None:
+            current = current.next
+            size+=1
+        return size
+    
+    def displayNodes(self):
+        current = self.head
+        while current :
             print(current.info,end=" ")
             current = current.next
     def pickChoice(self):
