@@ -59,5 +59,14 @@ class LinkedList:
 def main():
     print()
     displayMenu()
+    choice = 0
+    while choice !=6:
+        choice = int(input("Enter your choice: "))
+        if choice ==1:
+            ll.pickChoice()
+            displayMenu()
+            
+    
+    ll.displayNodes()
     print()
 main()
