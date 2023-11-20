@@ -27,6 +27,24 @@ class LinkedList:
         while current :
             print(current.info,end=" ")
             current = current.next
+
+    def delNode(self):
+        del_node = int(input("Enter a node to del: "))
+
+        if self.head != None and self.head.info == del_node:
+            self.head = self.head.next
+        
+        current = self.head
+        prev = None
+
+        while current != None:
+            if current.info == del_node:
+                prev.next = current.next
+                return
+            prev = current
+            current = current.next
+        print("Not Found")
+
     def pickChoice(self):
         choice = 0 
         while choice != "4":
