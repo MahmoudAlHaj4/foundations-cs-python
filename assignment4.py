@@ -16,9 +16,13 @@ class LinkedList:
 
     def displayNodes(self):
         current = self.head
+        size = 0 
         while current != None:
             print(current.info,end=" ")
             current = current.next
+    def pickChoice(self):
+        print("The menu:\n", "\ta. Add Node\n","\tb. Display Nodes\n","\tc. Search and Delete Node\n","\td. Return to main menu")
+    
 
 def main():
     print()
