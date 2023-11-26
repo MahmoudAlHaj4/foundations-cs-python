@@ -13,8 +13,8 @@ class Node: #Class Node
 class LinkedList:
     def __init__(self):
         self.head = None
-
-    def displayNodes(self):
+    
+    def getSize(self):
         current = self.head
         size = 0 
         while current != None:
