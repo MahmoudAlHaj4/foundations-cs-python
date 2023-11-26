@@ -76,6 +76,13 @@ class Queue:
     self.head = None
     self.tail = None
     self.size = 0        
+
+    def enqueue(self, value):
+        self.lst_queue.append(value)
+        self.size += 1
+        if self.size == 1:
+            self.head = value
+        self.tail = value     
         
             
                         
