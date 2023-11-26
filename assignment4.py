@@ -70,6 +70,14 @@ class LinkedList:
                 print("Invalid Input")
         print("You Left")
             
+class Queue:
+  def __init__(self):
+    self.lst_queue = []
+    self.head = None
+    self.tail = None
+    self.size = 0        
+        
+            
                         
         
     
