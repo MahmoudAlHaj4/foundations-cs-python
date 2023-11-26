@@ -6,7 +6,6 @@ def displayMenu(): # function to display Menu for user
 
 class Node: #Class Node 
     def __init__(self,info):
-        self.head = None
         self.info = info
         self.next = None
         
