@@ -43,7 +43,7 @@ class LinkedList:
                 return
             prev = current
             current = current.next
-        print("Not Found")
+        
 
     def pickChoice(self):
         choice = 0 
