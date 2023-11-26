@@ -53,19 +53,19 @@ class LinkedList:
             if choice == "1":
                 value = int(input("Enter a value of node: "))
                 new_node = Node(value)
-                if self.head is None:
+                if self.head == None:
                     self.head = new_node
                 else:
                     current = self.head
-                    while current.next is not None:
+                    while current.next != None:
                         current = current.next
                     current.next = new_node
             elif choice == "2":
-                print()
+                print("\nThe Nodes : ", end=" ")
                 self.displayNodes()
                 print()
             elif choice == "3":
-                print("serach and dele")
+                self.delNode()
             elif choice != "4":
                 print("Invalid Input")
         print("You Left")
