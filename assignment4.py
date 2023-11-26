@@ -114,6 +114,8 @@ class Queue:
     
 
 def main():
+    ll = LinkedList()
+    queue = Queue()
     print()
     displayMenu()
     choice = 0
@@ -122,6 +124,14 @@ def main():
         if choice ==1:
             ll.pickChoice()
             displayMenu()
+        elif choice == 2:
+            user = input("Enter a string:")
+    
+            if queue.CheckPalindrome(user):
+                print("The string is a palindrome!")
+            else:
+                print("The string is not a palindrome.")
+                    
             
     
     ll.displayNodes()
