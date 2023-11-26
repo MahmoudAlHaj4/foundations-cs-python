@@ -83,6 +83,18 @@ class Queue:
         if self.size == 1:
             self.head = value
         self.tail = value     
+
+    def dequeue(self):
+        if self.size == 0:
+            print("Empty")
+            return None
+        elif self.size == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.lst_queue[1]
+        self.size -= 1
+        return self.lst_queue.pop(0)    
         
             
                         
