@@ -309,6 +309,16 @@ def main():
         elif choice == 3:
             PQ.displayMenu()
             displayMenu()
+        elif choice == 4:
+            print("any")
+
+        elif choice == 5:
+            grapg.displayMenu()
+        
+        elif choice != 6:
+            print("invalid input")
+    print("you left")
+    
             
     
     ll.displayNodes()
