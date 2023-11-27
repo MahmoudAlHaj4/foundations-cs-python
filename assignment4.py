@@ -108,7 +108,7 @@ class Queue:
             index -= 1
 
         return True         
-                        
+
 class Student:
     def __init__(self,name,midterm_grade,final_grade, good_personality):
         self.name = name
