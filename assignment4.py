@@ -246,6 +246,14 @@ class Graph1:
         self.num_vertices = 0
         self.adj_matrix = []
             
+    def addVertex(self):
+        self.num_vertices += 1
+        for row in self.adj_matrix:
+            row.append(0)
+        self.adj_matrix.append([0] * self.num_vertices)
+        print("Added vertex", self.num_vertices - 1, "\n")
+        print("Added vertex", self.num_vertices - 1, "\n")
+            
     
 
 def main():
