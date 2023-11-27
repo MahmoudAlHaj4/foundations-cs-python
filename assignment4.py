@@ -262,6 +262,25 @@ class Graph:
         else:
             print("Invalid vertices", v1, "and", v2, "\n")
 
+    def displayMenu(self):
+        while True:
+            print("\nSub Menu:")
+            print("a. Add vertex")
+            print("b. Add edge")
+            print("c. Remove vertex")
+            print("d. Remove edge")
+            print("e. Display vertices with a degree of X :")
+            print("f. Return to main menu")
+
+            choice = input("Enter your choice: ")
+
+            if choice == 'a':
+                self.addVertex()
+            elif choice == 'b':
+                v1 = int(input("Enter first vertex: "))
+                v2 = int(input("Enter second vertex: "))
+                self.addEdge(v1, v2)
+
 
             
     
