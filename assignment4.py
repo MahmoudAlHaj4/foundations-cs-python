@@ -240,7 +240,7 @@ class PriorityQueue:
             elif choice != '3':
                 print("Invalid input. Please try again.")
 
-class Graph1:
+class Graph:
 
     def __init__(self):
         self.num_vertices = 0
@@ -261,6 +261,8 @@ class Graph1:
             print("Added an edge between vertices", v1, "and", v2, "\n")
         else:
             print("Invalid vertices", v1, "and", v2, "\n")
+
+
             
     
 
@@ -268,6 +270,7 @@ def main():
     ll = LinkedList()
     queue = Queue()
     PQ= PriorityQueue()
+    grapg = Graph()
     print()
     displayMenu()
     choice = 0
