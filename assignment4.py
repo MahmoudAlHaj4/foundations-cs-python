@@ -240,27 +240,7 @@ class PriorityQueue:
             elif choice != '3':
                 print("Invalid input. Please try again.")
 
-class Graph1:
 
-    def __init__(self):
-        self.num_vertices = 0
-        self.adj_matrix = []
-            
-    def addVertex(self):
-        self.num_vertices += 1
-        for row in self.adj_matrix:
-            row.append(0)
-        self.adj_matrix.append([0] * self.num_vertices)
-        print("Added vertex", self.num_vertices - 1, "\n")
-        print("Added vertex", self.num_vertices - 1, "\n")
-            
-    def addEdge(self, v1, v2):
-        if 0 <= v1 < self.num_vertices and 0 <= v2 < self.num_vertices:
-            self.adj_matrix[v1][v2] = 1
-            self.adj_matrix[v2][v1] = 1
-            print("Added an edge between vertices", v1, "and", v2, "\n")
-        else:
-            print("Invalid vertices", v1, "and", v2, "\n")
             
     
 
