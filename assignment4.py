@@ -109,6 +109,138 @@ class Queue:
 
         return True         
                         
+class Student:
+    def __init__(self,name,midterm_grade,final_grade, good_personality):
+        self.name = name
+        self.midterm_grade = midterm_grade
+        self.final_grade = final_grade
+        self.good_personality = good_personality
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class PriorityQueue:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+    
+    def dispalyNodes(self):
+        current= self.head
+        while current!= None:
+            print(current.data)
+            current = current.next
+
+    def enqueue(self,student):
+        node = Node(student)
+
+        if self.size == 0:
+            self.head = node
+            self.size +=1
+        else:
+            if node.data < self.head.data:
+                node.next = self.head
+                self.head = node
+                self.size +=1
+            else:
+                current = self.head
+                prev = current
+
+                while current != None and current.data <=node.data:
+                    prev =current
+                    current = current.next
+                prev.next = node
+                node.next = current
+                self.size +=1
+
+    def dequeue(self):
+        if self.size == 0:
+            print("Your Queue is Empty Enqueue First")
+        if self.size == 1:
+            self.head = None
+            self.size -=1
+        else:
+            print("we are removing ", self.head.data)
+            current = self.head
+            self.head = self.head.next
+            current.next = None
+            self.size-=1
+
+
+    def addStudent(self):
+        name = input("Enter  name:")
+        midterm = int(input("Enter  midterm grade: "))
+        final = int(input("Enter  final grade: "))
+        good_personality = (input("enter true if the student has a good_pers: "))
+
+        if good_personality == "true":
+            good_personality ==True
+        else:
+            good_personality ==False
+        
+        student = Student(name, midterm, final, good_personality)
+
+        self.enqueue(student)
+
+    def interviewAStudent(self):
+        if self.size == 0:
+            print("No student to Interview")
+            return
+
+        current = self.head
+        prev = None
+        while current:
+            if current.data.good_personality:
+                break
+            prev = current
+            current = current.next
+
+
+        if current:
+
+            highest_final = current
+            while current:
+                if current.data.good_personality:
+                    if current.data.final_grade > highest_final.data.final_grade:
+                        highest_final = current
+                    elif current.data.final_grade == highest_final.data.final_grade:
+                        if current.data.midterm_grade > highest_final.data.midterm_grade:
+                            highest_final = current
+                current = current.next
+            
+
+            student = highest_final.data
+            print("Interviewing:", student.name)
+
+            if highest_final == self.head:
+                self.head = self.head.next
+            else:
+                prev.next = highest_final.next
+            self.size -= 1
+
+            return student 
+        else:
+            print("No student with a good personality found")
+
+
+    def displayMenu(self):
+        choice = 0
+        while choice != '3':
+            print("\nThe menu:")
+            print("1. Add a student")
+            print("2. Interview a student")
+            print("3. Back to main menu")
+
+            choice = input("Enter your choice: ")
+            if choice == '1':
+                self.addStudent()
+            elif choice == '2':
+                self.interviewAStudent()
+            elif choice != '3':
+                print("Invalid input. Please try again.")
+
+
         
     
 
