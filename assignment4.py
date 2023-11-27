@@ -254,6 +254,14 @@ class Graph1:
         print("Added vertex", self.num_vertices - 1, "\n")
         print("Added vertex", self.num_vertices - 1, "\n")
             
+    def addEdge(self, v1, v2):
+        if 0 <= v1 < self.num_vertices and 0 <= v2 < self.num_vertices:
+            self.adj_matrix[v1][v2] = 1
+            self.adj_matrix[v2][v1] = 1
+            print("Added an edge between vertices", v1, "and", v2, "\n")
+        else:
+            print("Invalid vertices", v1, "and", v2, "\n")
+            
     
 
 def main():
