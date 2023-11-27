@@ -240,7 +240,11 @@ class PriorityQueue:
             elif choice != '3':
                 print("Invalid input. Please try again.")
 
+class Graph1:
 
+    def __init__(self):
+        self.num_vertices = 0
+        self.adj_matrix = []
             
     
 
