@@ -241,12 +241,13 @@ class PriorityQueue:
                 print("Invalid input. Please try again.")
 
 
-        
+            
     
 
 def main():
     ll = LinkedList()
     queue = Queue()
+    PQ= PriorityQueue()
     print()
     displayMenu()
     choice = 0
@@ -262,7 +263,10 @@ def main():
                 print("The string is a palindrome!")
             else:
                 print("The string is not a palindrome.")
-                    
+        
+        elif choice == 3:
+            PQ.displayMenu()
+            displayMenu()
             
     
     ll.displayNodes()
