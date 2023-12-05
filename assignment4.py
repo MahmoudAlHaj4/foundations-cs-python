@@ -79,10 +79,10 @@ class Queue:
 
     def enqueue(self, value):
       self.lst_queue.append(value)
-        self.size += 1
-        if self.size == 1:
-            self.head = value
-        self.tail = value 
+      self.size +=1
+      if self.size == 1:
+        self.head = value
+      self.tail = value
 
     def dequeue(self):
         if self.size == 0:
@@ -106,7 +106,7 @@ class Queue:
             self.tail = self.lst_queue[self.size - 2]
             self.lst_queue.pop()
             self.size -= 1
-                 
+
     def CheckPalindrome(self, s):
         for letter in s:
             self.enqueue(letter)
@@ -286,6 +286,25 @@ class Graph:
         else:
             print("Invalid vertices", v1, "and", v2, "\n")
 
+    def displayMenu(self):
+        while True:
+            print("\nSub Menu:")
+            print("a. Add vertex")
+            print("b. Add edge")
+            print("c. Remove vertex")
+            print("d. Remove edge")
+            print("e. Display vertices with a degree of X :")
+            print("f. Return to main menu")
+
+            choice = input("Enter your choice: ")
+
+            if choice == 'a':
+                self.addVertex()
+            elif choice == 'b':
+                v1 = int(input("Enter first vertex: "))
+                v2 = int(input("Enter second vertex: "))
+                self.addEdge(v1, v2)
+
 
             
     
@@ -298,7 +317,8 @@ def main():
     print()
     displayMenu()
     choice = 0
-    while choice !=6:
+    limit = 0
+    while choice !=6 and limit<4:
         choice = int(input("Enter your choice: "))
         if choice ==1:
             ll.pickChoice()
@@ -314,6 +334,18 @@ def main():
         elif choice == 3:
             PQ.displayMenu()
             displayMenu()
+        elif choice == 4:
+            print("any")
+
+        elif choice == 5:
+            grapg.displayMenu()
+            displayMenu()
+        
+        elif choice != 6:
+            limit+=1
+            print("invalid input",limit ,"/4")
+    print("you left")
+    
             
     
     ll.displayNodes()
