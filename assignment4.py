@@ -107,7 +107,31 @@ class Queue:
             self.lst_queue.pop()
             self.size -= 1
                  
-        return True         
+    def CheckPalindrome(self, s):
+        for letter in s:
+            self.enqueue(letter)
+        while self.size > 1: # eve
+            front = self.lst_queue[0]
+            end = self.lst_queue[self.size -1]
+            if front != end:
+                print(self.lst_queue)
+                print("The head is :", front)
+                print("The tail is :", end)
+                print("head != tail so it's not palidrome")
+                return False
+                
+            else:
+                print("The head is :", front)
+                print("The tail is :", end)
+                print("the orignal list is:",self.lst_queue)
+                
+                self.dequeue()
+                self.pops()
+                print("the list after dequeue and pop is:",self.lst_queue)
+            print("Yes it's a palidrome")
+            return True
+            
+                 
 
 class Student:
     def __init__(self,name,midterm_grade,final_grade, good_personality):
