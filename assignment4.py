@@ -84,22 +84,19 @@ class Queue:
             self.head = value
         self.tail = value 
 
-  def dequeue(self):
+    def dequeue(self):
         if self.size == 0:
-            print("Empty")
-            return None
+            print("empty")
         elif self.size == 1:
             self.head = None
             self.tail = None
+            self.size += 1
         else:
             self.head = self.lst_queue[1]
+            self.lst_queue.pop(0)
         self.size -= 1
         return self.lst_queue.pop(0)    
         
-  def CheckPalindrome(self, s):
-        string = s.lower().replace(" ", "") 
-        for char in s:  
-            self.enqueue(char)
         
         index = len(string) - 1  
         while self.size > 1:  
