@@ -94,17 +94,19 @@ class Queue:
         else:
             self.head = self.lst_queue[1]
             self.lst_queue.pop(0)
-        self.size -= 1
-        return self.lst_queue.pop(0)    
-        
-        
-        index = len(string) - 1  
-        while self.size > 1:  
-            char = self.dequeue()  
-            if char != string[index]:
-                return False
-            index -= 1
+            self.size -= 1
 
+    def pops(self):
+        if self.size == 0:
+            print("Empty")
+        elif self.size == 1:
+            self.head = None
+            self.size -= 1
+        else:
+            self.tail = self.lst_queue[self.size - 2]
+            self.lst_queue.pop()
+            self.size -= 1
+                 
         return True         
 
 class Student:
